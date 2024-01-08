@@ -45,4 +45,11 @@ print(result)
 '''
 import sys
 
-n, m = map(int, sys.stdin.readline().split())
+def howLong(X):
+	length = 0
+	while(X>0):
+		X //= 10
+		length += 1
+	return length
+
+print(howLong(666))
