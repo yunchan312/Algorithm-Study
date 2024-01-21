@@ -43,3 +43,6 @@ print(result)
 	첫번째 ㄹ
 	
 '''
+'''a = [1,2,3,4]
+if 5 in a:
+    print('yes')'''
