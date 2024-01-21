@@ -13,3 +13,4 @@ for i in range(m):
     cities[a-1].append(b-1)
 
 visited = [False for _ in range(n)]
+    
