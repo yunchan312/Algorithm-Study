@@ -43,13 +43,3 @@ print(result)
 	첫번째 ㄹ
 	
 '''
-import sys
-
-def howLong(X):
-	length = 0
-	while(X>0):
-		X //= 10
-		length += 1
-	return length
-
-print(howLong(666))

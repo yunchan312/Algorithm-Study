@@ -19,7 +19,6 @@ for i in range(k):
     yInd[i] = y
 
 #두 점을 선택하여, 두 점이 걸쳐지는 점을 왼쪽 아래 곡짓점으로 하여 가장 많은 별들을 튕겨낼 수 있는 배치를 찾는다.
-
 for x in xInd:
     for y in yInd:
         cnt = 0
