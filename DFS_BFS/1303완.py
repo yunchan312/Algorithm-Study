@@ -31,10 +31,10 @@ def getPower(y,x,color):
 
 for i in range(m):
     for j in range(n):
-        if getPower(j,i,'B') == True:
+        if getPower(i,j,'B') == True:
             blue.append(b**2)
             b = 0
-        if getPower(j,i,'W') == True:
+        if getPower(i,j,'W') == True:
             white.append(w**2)
             w = 0
 
