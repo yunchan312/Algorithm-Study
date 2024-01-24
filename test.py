@@ -46,3 +46,5 @@ print(result)
 '''a = [1,2,3,4]
 if 5 in a:
     print('yes')'''
+
+print(15//10)
