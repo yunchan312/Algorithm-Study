@@ -47,4 +47,14 @@ print(result)
 if 5 in a:
     print('yes')'''
 
-print(15//10)
+'''apples=[(1,2),(3,4),(5,6)]
+for ind, A in enumerate(apples):
+    ay, ax = A
+    print(ind, ay, ax)'''
+from collections import deque
+
+apples=deque([1,2,3])
+apples.append(4)
+print(apples)
+apples.pop()
+print(apples)
