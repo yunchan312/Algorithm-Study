@@ -26,7 +26,7 @@ dir = 0
 dx = [1, 0, -1, 0]
 dy = [0, 1, 0, -1]
 
-hx, hy, tx, ty = 1, 1, 1, 1
+hx, hy = 1, 1
 
 for _ in range(K):
     ar, ac = map(int, input().split())

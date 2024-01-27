@@ -10,7 +10,7 @@ from collections import deque
 input = sys.stdin.readline
 
 dq = deque()
-n,g,t = map(int, input().split())
+n,t,g = map(int, input().split())
 visited = set()
 
 dq.append((n, 0))
@@ -21,31 +21,29 @@ def A(x):
 def B(x):
     temp=x*2
     t=0
-    while(temp//10 != 0):
+    while(temp//10 > 0):
         t+=1
         temp//=10
     return (x*2) - (10**t)
 didItWork = False
 
-while dq:
-    temp, cnt = dq.popleft()
-    if cnt > t:
+while(dq):
+    temp, curTime = dq.popleft()
+    if curTime > t:
         break
     if temp == g:
-        didItWork = True
+        didItWork=True
+        print(curTime)
         break
 
-    if A(temp) not in visited and A(temp) < 100000:
-        dq.append((A(temp), cnt+1))
+    if A(temp)<=99999 and A(temp) not in visited:
+        dq.append((A(temp), curTime+1))
         visited.add(A(temp))
-    
-    if B(temp) not in visited and B(temp) < 100000:
-        dq.append((B(temp), cnt+1))
-        visited.add(B(temp))
-    
-if didItWork:
-    print(cnt)
-else:
-    print('ANG')
 
-    
+    if temp>0 and temp*2 <= 99999:
+        if B(temp) not in visited:
+            dq.append((B(temp), curTime+1))
+            visited.add(B(temp))
+
+if not didItWork:
+    print('ANG')

@@ -58,3 +58,5 @@ apples.append(4)
 print(apples)
 apples.pop()
 print(apples)
+if 10 not in apples:
+    print(1)
