@@ -70,8 +70,6 @@ def changeDir(timeCnt, commands):
             return comType
         return
 
-
-
 timeCnt = 0
 while(True):
     timeCnt +=1
