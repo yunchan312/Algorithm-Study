@@ -51,7 +51,7 @@ if 5 in a:
 for ind, A in enumerate(apples):
     ay, ax = A
     print(ind, ay, ax)'''
-from collections import deque
+'''from collections import deque
 
 apples=deque([1,2,3])
 apples.append(4)
@@ -59,4 +59,10 @@ print(apples)
 apples.pop()
 print(apples)
 if 10 not in apples:
-    print(1)
+    print(1)'''
+
+'''dp = [(10,3), (11,2), (12,1), (0,13)]
+print(max(dp))'''
+
+dp=[[1,2,3,4],[5,6,7,8]]
+print(dp[0][:2])
