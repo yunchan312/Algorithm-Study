@@ -64,5 +64,8 @@ if 10 not in apples:
 '''dp = [(10,3), (11,2), (12,1), (0,13)]
 print(max(dp))'''
 
-dp=[[1,2,3,4],[5,6,7,8]]
-print(dp[0][:2])
+for i in range(10):
+    if i == 3:
+        print(3)
+        break
+    print(4)
