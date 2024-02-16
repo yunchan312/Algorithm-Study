@@ -19,8 +19,6 @@ for _ in range(T):
         print(max(dp[0][1], dp[1][1]))
         continue
 
-
-
     for x in range(2, N):
         dp[0][x] = sticker[0][x] + max(dp[1][x-1], dp[1][x-2])
         dp[1][x] = sticker[1][x] +  max(dp[0][x-1], dp[0][x-2])
