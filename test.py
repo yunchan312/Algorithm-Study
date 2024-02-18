@@ -64,5 +64,9 @@ if 10 not in apples:
 '''dp = [(10,3), (11,2), (12,1), (0,13)]
 print(max(dp))'''
 
-N = [input() for _ in range(4)]
-print(N)
+'''N = [input() for _ in range(4)]
+for i in range(4):
+    if 'a' in N[i]:
+        print(N[i])'''
+
+print(max((2,0), (1,1)))

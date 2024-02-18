@@ -10,7 +10,7 @@ cnt = 0
 for text in texts:
     for string in strings:
         if string[0] == text[0]:
-            if string[:len(text)] == text:
+            if text in string:
                 cnt +=1
                 break
 print(cnt)
