@@ -1,9 +1,18 @@
 n = int(input())
-direction = list(input().split())
+directions = list(input().split())
 
-dx = [-1,0,1,0]
-dy = [0,1,0,-1]
+#(row, col)
+cy, cx = 1,1 # 1 <= cx, cy <= n
 
-x,y = 1,1
-
+for d in directions:
+  if d == 'R' and cx+1 <=n:
+    cx += 1
+  elif d == 'U' and cy-1>0:
+    cy -= 1
+  elif d == 'L' and cx-1>0:
+    cx-=1
+  elif d =='D' and cy+1<=n:
+    cy += 1
+  
+print(cy, cx)
 
