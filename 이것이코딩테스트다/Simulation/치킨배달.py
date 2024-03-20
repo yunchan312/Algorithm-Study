@@ -1,5 +1,6 @@
 from collections import defaultdict
 from collections import deque
+import itertools as iter
 
 def getCloseChicken(chickens, house):
   cur_min = 1000000000
@@ -13,6 +14,7 @@ def getCloseChicken(chickens, house):
 def getChickenDist(chicken, house):
   return abs(chicken[0]-house[0])+abs(chicken[1]-house[1])
 
+
 N, M = map(int, input().split())
 city = [list(map(int, input().split())) for _ in range(N)]
 chickens, houses = deque(),deque()
@@ -23,13 +25,19 @@ for r in range(N):
     elif city[r][c] == 2:
       chickens.append((r,c))
 
-combi = defaultdict(deque)
-for house in houses:
-  combi[getCloseChicken(chickens, house)].append(house)
+MChickens = deque(iter.combinations(chickens, M))
+#print(list(MChickens[0]))
+for i in MChickens:
+    print(getChickenDist(list(MChickens[i]), houses))
 
-cityChickenDist = 0
+def getCityChickenDist(chickens, houses):
+  combi = defaultdict(deque)
+  for house in houses:
+    combi[getCloseChicken(chickens, house)].append(house)
 
-for chi_row, chi_col in combi:
-  for homes in combi[(chi_row, chi_col)]:
-    cityChickenDist += getChickenDist((chi_row, chi_col), homes)
-print(cityChickenDist)
+  cityChickenDist = 0
+
+  for chi_row, chi_col in combi:
+    for homes in combi[(chi_row, chi_col)]:
+      cityChickenDist += getChickenDist((chi_row, chi_col), homes)
+  return cityChickenDist

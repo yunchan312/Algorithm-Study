@@ -68,5 +68,8 @@ print(max(dp))'''
 for i in range(4):
     if 'a' in N[i]:
         print(N[i])'''
+from collections import deque
 
-print(max((2,0), (1,1)))
+A = deque([1,2,3,4,5,6])
+A.insert(0,10)
+print(A)
