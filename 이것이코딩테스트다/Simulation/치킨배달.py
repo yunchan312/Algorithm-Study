@@ -25,11 +25,6 @@ for r in range(N):
     elif city[r][c] == 2:
       chickens.append((r,c))
 
-MChickens = deque(iter.combinations(chickens, M))
-#print(list(MChickens[0]))
-for i in MChickens:
-    print(getChickenDist(list(MChickens[i]), houses))
-
 def getCityChickenDist(chickens, houses):
   combi = defaultdict(deque)
   for house in houses:
