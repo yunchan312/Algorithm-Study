@@ -7,7 +7,7 @@ if sum(h)%3 != 0:
 else:
     for i in h:
         cnt += i // 2 #2번 물뿌리개를 사용한 횟수
-    if cnt >= (sum(h) / 3):
-        print("YES")
-    else:
+    if cnt < (sum(h) / 3):
         print("NO")
+    else:
+        print("YES")
